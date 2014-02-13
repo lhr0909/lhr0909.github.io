@@ -1,3 +1,6 @@
-name: Your New Jekyll Site
+name: Simon's Github Page
 markdown: redcarpet
+pygments: true
+safe: true
+lsi: false
 pygments: true
