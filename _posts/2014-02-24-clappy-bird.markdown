@@ -11,7 +11,7 @@ Damn, that sounds cool. I decided to join him for the development, as a Mini Lud
 
 The next day, our other coworker came in with some sound detection libs and we had a simple clapper going. Here is the Youtube Video for the working prototype with clapping:
 
-[![Clappy Bird Demo 1](http://img.youtube.com/vi/YGxukILh1xQ/0.jpg)](http://www.youtube.com/watch?v=YGxukILh1xQ)
+<iframe width="420" height="315" src="http://www.youtube.com/embed/YGxukILh1xQ" frameborder="0" allowfullscreen></iframe>
 
 This is pretty snazzy, isn't it? Here comes better. Today, we got some of our designer friends of Jiho, and we have some very very nice graphics for the game. After fighting with putting them on top of our prototype for hours (and my laptop just wouldn't run Eclipse properly, so I was trying to fix it for the whole afternoon before I gave up), here are some graphics:
 
