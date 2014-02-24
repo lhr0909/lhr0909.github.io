@@ -15,7 +15,7 @@ The next day, our other coworker came in with some sound detection libs and we h
 
 This is pretty snazzy, isn't it? Here comes better. Today, we got some of our designer friends of Jiho, and we have some very very nice graphics for the game. After fighting with putting them on top of our prototype for hours (and my laptop just wouldn't run Eclipse properly, so I was trying to fix it for the whole afternoon before I gave up), here are some graphics:
 
-![Screenshot 0][/img/clb-screenshot-0.png] ![Screenshot 1][/img/clb-screenshot-1.png] ![Screenshot 2][/img/clb-screenshot-2.png]
+![Screenshot 0](/img/clb-screenshot-0.png) ![Screenshot 1](/img/clb-screenshot-1.png) ![Screenshot 2](/img/clb-screenshot-2.png)
 
 This has been really fun! I haven't been this excited about programming for a very long time, and this really brings me back and makes me want to play with it a lot more.
 
