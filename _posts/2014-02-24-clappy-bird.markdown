@@ -13,10 +13,16 @@ The next day, our other coworker came in with some sound detection libs and we h
 
 <iframe width="420" height="315" src="http://www.youtube.com/embed/YGxukILh1xQ" frameborder="0" allowfullscreen></iframe>
 
-This is pretty snazzy, isn't it? Here comes better. Today, we got some of our designer friends of Jiho, and we have some very very nice graphics for the game. After fighting with putting them on top of our prototype for hours (and my laptop just wouldn't run Eclipse properly, so I was trying to fix it for the whole afternoon before I gave up), here are some graphics:
+This is pretty snazzy, isn't it? Here comes better. Today, we got some of the designer friends of Jiho to make some very very nice graphics for the game. After fighting with putting them on top of our prototype for hours (and my laptop just wouldn't run Eclipse properly, so I was trying to fix it for the whole afternoon before I gave up), the game finally feels complete! There are still just a little bit left to do, especially the clap detection part. I was hinting Jiho Saturday night at dinner that sounds were translated into frequency spectrum using Fast Fourier Transforms. He went off and did research for it and got a very fast implementation working, all we have left is to make filter the correct frequencies in order to recognize a clap.
 
-![Screenshot 0](/img/clb-screenshot-0.png) ![Screenshot 1](/img/clb-screenshot-1.png) ![Screenshot 2](/img/clb-screenshot-2.png)
-
-This has been really fun! I haven't been this excited about programming for a very long time, and this really brings me back and makes me want to play with it a lot more.
+This has been really fun! I haven't been this excited about programming for a very long time, and this really brings me back and makes me want to play with it a lot more. Senior year of college, I made a game prototype with the exact same technology, and I haven't had motivation to finish it for such a long time. Now with Clappy Bird, I think I can finish my other design pretty soon.
 
 Thanks everyone who participated the project, especially Jiho for making this happen!
+
+Game Graphics:
+
+![Screenshot 0](/img/clb-screenshot-0.png)
+
+![Screenshot 1](/img/clb-screenshot-1.png)
+
+![Screenshot 2](/img/clb-screenshot-2.png)
