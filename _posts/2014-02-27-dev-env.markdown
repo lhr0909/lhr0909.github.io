@@ -1,0 +1,32 @@
+---
+layout: post
+title:  "Thoughts about Development Environment"
+date:   2014-02-27 16:00:00
+categories: development
+---
+
+Recently I was working on Clappy Bird with my coworker Jiho, and majority of the development time was done over one weekend. Friday evening after work, I went to his apartment to start hacking. We decided that we shouldn't use our company hardware for this (I only had my company mac with me), so he said that I could use his desktop for now, which is a Windows machine loaded up with ADT Eclipse, no biggie. It didn't have much hassle, but after all, it is a Windows machine, it is just not that good for development where you want a good shell and do mad things with. So I decided I should bring my laptop over the next day.
+
+I went back home and checked my hardwares, and this is what I have:
+
+* a big Windows Desktop that I play my games with
+* a quasi-broken NAS that I haven't bothered to fix
+* an HP Chromebook (the one that had issues with the power adapter)
+* a Raspberry Pi (with a Motorola Atrix Lapdock that I can make use of it as a screen/keyboard/touchpad)
+* a Lenovo Y480 that I had a dual-boot Windows and Arch Linux (I had a working dualboot until last summer when I reinstalled Windows and it overwrote GRUB)
+
+Cool, easy choice. I am going to redo GRUB and use my Arch for the development. Turned out that it wasn't as smooth as I thought it would be.
+
+First of all, ADB only works under 32-bit environment. I would have to get most of the lib32 packages installed for my 64-bit Arch. What is even worse is that even ADB worked, I would have to figure out how to enable the USB hub to make Arch recognize my phone (and a mouse that I borrowed from Jiho)!
+
+Let's flash back to the time when I decided to give a try at Arch. It was Senior Year and one of my friends at School James told me to try it. He is a Physics/Math Double Major and he loves astrominal physics. He does a lot of C/C++/MATLAB simulations of the space, or redoing a fast linear algebra implementation or whatever. He had been telling me that how Arch is so amazing and I should try it. I read up a little bit about their principles, and I really like the idea where it is very clean and plain, and has a pretty strong support in terms of package management.
+
+So I started off by putting Arch on my Lenovo laptop. Quickly after the image was loaded, I ran into my first roadblock: my Ethernet was too new and I needed to download it and install it. Welp, what now? After googling for a while, I finally found a way: I had to USB tether Internet to my laptop with my Android phone, then go grab the Ethernet/Wifi Drivers. After that it is desktop environment, adding Chinese display support, sounds, and monitor support. I think it took me about two full days and several re-installs to get what I really wanted at the end. I still think it was worth the time though since I actually learned quite a bit about how everything works, and most importantly, nothing is free. If you want your computer to behave as what you wish it to, you will have to work for it.
+
+But why am I writing this "rant"? It is that, now I think about it a little more, I finally understand why developers like Macs, not just because it is fancy/cool/strong support or anything, it is more because Mac is always shipped as is, and developers don't have do too much with it in order to get the peripherals/drivers/softwares working. There are already people dedicated to solve most of these problems for the users. It literally just frees developers and allows them to focus on solving more interesting tasks for them.
+
+So At the end of the day, I stopped fighting with configuring my Arch on my laptop and fresh reloaded my lenovo with Ubuntu 12.04 LTS. Then I put on ADT and git and started working on Clappy Bird again.
+
+While this is a good lesson to be learned, I think that minimalistic distros like Arch still has its own place. I really like how slim it is and I could get a lot done if I put it on my Raspberry Pi, and configured the hardware once, or I set Arch up for my servers (My Digital Ocean Droplet is running Arch). The cleaniness of the distro is unparallel. Especially for my server, I mean, all I ever need is ssh to deploy stuff on the droplet.
+
+I like everything to be simple, and I really need to pick my battles where I want to be simple.

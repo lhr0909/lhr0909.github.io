@@ -2,7 +2,7 @@
 layout: post
 title:  "Clappy Bird"
 date:   2014-02-24 02:25:00
-categories: random
+categories: gamedev
 ---
 
 So I assume most of you know about Flappy Bird by now, legendary app, crazy drama, mad clones, etc.  So earlier last week, on a Wednesday (or Thursday), one of my coworkers, Jiho, shared this idea: What if we make Flappy Bird, but we have to clap to get the bird to jump (aka *Clappy* Bird)?
