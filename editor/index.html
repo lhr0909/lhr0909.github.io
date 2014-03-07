@@ -11,7 +11,17 @@ title: Editor
 }</pre>
     
 <script src="/js/ace-editor/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
 <script>
+    $(document).ready(function() {
+        $.ajax({
+            type: "GET",
+            url: "http://ideone.com",
+            success: function(data) {
+                console.log($("#p1", data).attr("value"));
+            }
+        })
+    });
     var editor = ace.edit("editor");
     editor.setTheme("ace/theme/twilight");
     editor.getSession().setMode("ace/mode/javascript");
