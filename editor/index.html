@@ -16,6 +16,7 @@ title: Editor
     $(document).ready(function() {
         $.ajax({
             type: "GET",
+            crossDomain: true,
             url: "http://ideone.com",
             success: function(data) {
                 console.log($("#p1", data).attr("value"));
