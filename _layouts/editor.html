@@ -2,19 +2,30 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" href="/css/firepad.css">
+  <link rel="stylesheet" href="/css/firepad-userlist.css">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>{{page.title}}</title>
   <style type="text/css" media="screen">
     #editor {
-        width: 50%;
-	height: 600px;
-	margin: auto;
+        position: absolute;
+        width: 600px;
+        height: 300px;
+        left: 175px;
+        margin:0;
+    }
+    #userlist .firepad-userlist {
+        position: absolute;
+        width: 175px;
+        height: 300px;
+    }
+    #container {
+        margin: auto;
+        max-width: 60%;
     }
   </style>
 </head>
 <body>
-<center><h1>Editor!</h1></center>
 {{ content }}
 </body>
 </html>

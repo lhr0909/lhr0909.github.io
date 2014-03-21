@@ -2,13 +2,16 @@
 layout: editor
 title: Editor
 ---
-
-<pre id="editor">
-</pre>
+<center><h2>Intercode - Coding Interviews Done Right</h2></center>
+<div id="container">
+    <div id="userlist"></div>
+    <pre id="editor"></pre>
+</div>
 
 <script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.6/firebase.js'></script>
 <script src="/js/ace-editor/ace.js" type="text/javascript" charset="utf-8"></script>
 <script src="/js/firepad-min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/firepad-userlist.js" type="text/javascript" charset="utf-8"></script>
 <script src="/js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
 <script>
     window.onload = function() {
@@ -21,15 +24,20 @@ title: Editor
       var session = editor.getSession();
       session.setUseWrapMode(true);
       session.setUseWorker(false);
-      session.setMode("ace/mode/javascript");
+      session.setMode("ace/mode/python");
+
+      // Create a random ID to use as our user ID (we must give this to firepad and FirepadUserList).
+      var userId = Math.floor(Math.random() * 9999999999).toString();
 
       //// Create Firepad.
-      var firepad = Firepad.fromACE(ref, editor);
+      var firepad = Firepad.fromACE(ref, editor, {userId: userId});
+      var firepadUserList = FirepadUserList.fromDiv(ref.child('users'),
+        document.getElementById('userlist'), userId);
 
       //// Initialize contents.
       firepad.on('ready', function() {
         if (firepad.isHistoryEmpty()) {
-          firepad.setText('');
+          firepad.setText('var foo = function(bar) {\n    console.log(bar);\n}');
         }
       });
     };
