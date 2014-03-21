@@ -69,7 +69,7 @@ pre.firepad-lt-o, pre.firepad-lt-u, pre.firepad-lt-t, pre.firepad-lt-tc {
 
 .powered-by-firepad {
   position: absolute;
-  display: block;
+  display: none;
   z-index: 5;
   right: 20px;
   bottom: 20px;
