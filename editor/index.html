@@ -3,28 +3,34 @@ layout: editor
 title: Editor
 ---
 
-<pre id="editor">function foo(items) {
-    var i;
-    for (i = 0; i &lt; items.length; i++) {
-        alert("Ace Rocks " + items[i]);
-    }
-}</pre>
-    
+<pre id="editor">
+</pre>
+
+<script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.6/firebase.js'></script>
 <script src="/js/ace-editor/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/firepad-min.js" type="text/javascript" charset="utf-8"></script>
 <script src="/js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
 <script>
-    $(document).ready(function() {
-        $.ajax({
-            type: "GET",
-            crossDomain: true,
-            url: "http://ideone.com",
-            success: function(data) {
-                console.log($("#p1", data).attr("value"));
-            }
-        })
-    });
-    var editor = ace.edit("editor");
-    editor.setTheme("ace/theme/twilight");
-    editor.getSession().setMode("ace/mode/javascript");
-</script>
+    window.onload = function() {
+      //// Initialize Firebase.
+      var ref = new Firebase('http://intercode.firebaseio.com/');
 
+      //// Create ACE
+      var editor = ace.edit("editor");
+      editor.setTheme("ace/theme/twilight");
+      var session = editor.getSession();
+      session.setUseWrapMode(true);
+      session.setUseWorker(false);
+      session.setMode("ace/mode/javascript");
+
+      //// Create Firepad.
+      var firepad = Firepad.fromACE(ref, editor);
+
+      //// Initialize contents.
+      firepad.on('ready', function() {
+        if (firepad.isHistoryEmpty()) {
+          firepad.setText('');
+        }
+      });
+    };
+</script>
