@@ -19,8 +19,12 @@ title: Simon's Poker Progress
 			startProfit = startProfit + self.totalProfit;
 			totalProfits.push(startProfit);
 		});
+		var labels = [];
+		for (var i = 0; i < totalProfits.length; i++) {
+			labels.push(i+1);
+		}
 		var data = {
-			//labels : ["January","February","March","April","May","June","July"],
+			labels : labels,
 			datasets : [
 				{
 					fillColor : "rgba(3,151,106,0.5)",
