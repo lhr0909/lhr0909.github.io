@@ -14,8 +14,9 @@ title: Simon's Poker Progress
 	$.getJSON( "http://www.divby0.io/fpdb-display/cash_graph.json", function( data ) {
 		var startProfit = 0;
 		var totalProfits = [];
-		$.each(data, function(item) {
-			startProfit = startProfit + item.toalProfit;
+		$.each(data, function(i) {
+			var self = this;
+			startProfit = startProfit + self.toalProfit;
 			totalProfits.push(startProfit);
 		});
 		var data = {
