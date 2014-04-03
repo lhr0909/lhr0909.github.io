@@ -16,7 +16,7 @@ title: Simon's Poker Progress
 		var totalProfits = [];
 		$.each(data, function(i) {
 			var self = this;
-			startProfit = startProfit + self.totalProfit;
+			startProfit = startProfit + self.totalProfit / 100;
 			totalProfits.push(startProfit);
 		});
 		var labels = [];
@@ -36,7 +36,10 @@ title: Simon's Poker Progress
 			]
 		}
 		var options = {
-			scaleOverlay : true
+			scaleOverlay : true,
+			scaleOverride : true,
+			scaleSteps : 100,
+			scaleStartValue : 1,
 		}
 		var cashGraph = new Chart(ctx).Line(data, options);
 	});
