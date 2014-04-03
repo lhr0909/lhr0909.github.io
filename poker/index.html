@@ -35,6 +35,9 @@ title: Simon's Poker Progress
 				}
 			]
 		}
-		var cashGraph = new Chart(ctx).Line(data);
+		var options = {
+			scaleOverlay : true
+		}
+		var cashGraph = new Chart(ctx).Line(data, options);
 	});
 </script>
