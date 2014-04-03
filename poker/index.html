@@ -9,7 +9,6 @@ title: Simon's Poker Progress
 <script src="/js/jquery-1.11.0.min.js"></script>
 <script src="/js/canvasjs.min.js"></script>
 <script>
-	var ctx = $("#cashGraph").get(0).getContext("2d");
 	$.getJSON( "http://www.divby0.io/fpdb-display/cash_graph.json", function( data ) {
 		var startProfit = 0;
 		var totalProfits = [];
