@@ -18,8 +18,7 @@ title: Simon's Poker Progress
 			startProfit = startProfit + self.totalProfit / 100;
 			totalProfits.push({label : i + 1, y : startProfit});
 		});
-		var chart = new CanvasJS.Chart("cashGraph", 
-			{
+		var chart = new CanvasJS.Chart("cashGraph", {
 				title : {
 					text : "Cash Game Graph"
 				},
@@ -29,7 +28,6 @@ title: Simon's Poker Progress
 						dataPoints : totalProfits
 					}
 				]
-			}
 		});
 		chart.render();
 </script>
