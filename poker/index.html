@@ -3,32 +3,67 @@ layout: default
 title: Simon's Poker Progress
 ---
 
-<div id="cashGraphContainer">
 <div id="cashGraph" style="width: 100%; height: 400px;"></div>
-</div>
+<div id="tourneyGraph" style="width: 100%; height: 400px;"></div>
 <script src="/js/jquery-1.11.0.min.js"></script>
 <script src="/js/canvasjs.min.js"></script>
 <script>
-	$.getJSON( "http://www.divby0.io/fpdb-display/cash_graph.json", function( data ) {
-		var startProfit = 0;
-		var totalProfits = [];
-		$.each(data, function(i) {
-			var self = this;
-			startProfit = startProfit + self.totalProfit / 100;
-			totalProfits.push({label : i + 1, y : startProfit});
+	var renderCashGraph = function() {
+		$.getJSON( "http://www.divby0.io/fpdb-display/cash_graph.json", function( data ) {
+			var startProfit = 0;
+			var totalProfits = [];
+			$.each(data, function(i) {
+				var self = this;
+				startProfit = startProfit + self.totalProfit / 100;
+				totalProfits.push({label : i + 1, y : startProfit});
+			});
+			var chart = new CanvasJS.Chart("cashGraph", {
+					title : {
+						fontSize : 16,
+						text : "Cash Game Graph: Total " + totalProfits.length + " Hands, Profit: " + startProfit.toFixed(2)
+					},
+					data : [
+						{
+							type : "line",
+							dataPoints : totalProfits
+						}
+					]
+			});
+			chart.render();
 		});
-		var chart = new CanvasJS.Chart("cashGraph", {
-				title : {
-					fontSize : 16,
-					text : "Cash Game Graph: Total " + totalProfits.length + " Hands, Profit: " + startProfit.toFixed(2)
-				},
-				data : [
-					{
-						type : "line",
-						dataPoints : totalProfits
-					}
-				]
+	};
+
+
+
+	var renderTourneyGraph = function() {
+		$.getJSON( "http://www.divby0.io/fpdb-display/tourney_graph.json", function( data ) {
+			var startProfit = 0;
+			var totalProfits = [];
+			$.each(data, function(i) {
+				var self = this;
+				startProfit = startProfit + self.profit / 100;
+				totalProfits.push({label : i + 1, y : startProfit});
+			});
+			var chart = new CanvasJS.Chart("tourneyGraph", {
+					title : {
+						fontSize : 16,
+						text : "Tourney Game Graph: Total " + totalProfits.length + " Tourneys, Profit: " + startProfit.toFixed(2)
+					},
+					data : [
+						{
+							type : "line",
+							dataPoints : totalProfits
+						}
+					]
+			});
+			chart.render();
 		});
-		chart.render();
+	};
+
+
+
+	$(document).ready(function() {
+		renderCashGraph();
+		renderTourneyGraph();
 	});
 </script>
