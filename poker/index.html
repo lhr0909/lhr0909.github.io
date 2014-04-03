@@ -11,26 +11,25 @@ title: Simon's Poker Progress
 <script src="/js/Chart.min.js"></script>
 <script>
 	var ctx = $("#cashGraph").get(0).getContext("2d");
-	var startProfit = 0;
-	var totalProfits = [];
 	$.getJSON( "http://www.divby0.io/fpdb-display/cash_graph.json", function( data ) {
+		var startProfit = 0;
+		var totalProfits = [];
 		$.each(data, function(item) {
 			startProfit = startProfit + item.toalProfit;
 			totalProfits.push(startProfit);
 		});
+		var data = {
+			//labels : ["January","February","March","April","May","June","July"],
+			datasets : [
+				{
+					fillColor : "rgba(3,151,106,0.5)",
+					strokeColor : "rgba(3,151,106,1)",
+					pointColor : "rgba(3,151,106,1)",
+					pointStrokeColor : "#fff",
+					data : totalProfits
+				}
+			]
+		}
+		var cashGraph = new Chart(ctx).Line(data);
 	});
-	var data = {
-		//labels : ["January","February","March","April","May","June","July"],
-		datasets : [
-			{
-				fillColor : "rgba(3,151,106,0.5)",
-				strokeColor : "rgba(3,151,106,1)",
-				pointColor : "rgba(3,151,106,1)",
-				pointStrokeColor : "#fff",
-				data : totalProfits
-			}
-		]
-	}
-
-	var myNewChart = new Chart(ctx).Line(data);
 </script>
