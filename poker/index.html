@@ -64,6 +64,7 @@ title: Simon's Poker Progress
 
 	var renderLiveGraph = function() {
 		$.get( "https://docs.google.com/spreadsheet/tq?key=0AhVaAslT4zEtdENWNl9GMlJYbi12M3RON1dKdXg4NlE&transpose=0&headers=1&range=D1%3AD100&gid=0&pub=1", function( data ) {
+			console.log(data);
 			var m = /.*[(](.*)[);]/g.exec(data);
 			var obj = $.parseJSON(m[1]);
 			var startProfit = 0;
