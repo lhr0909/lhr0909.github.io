@@ -6,7 +6,9 @@ title: Simon's Poker Progress
 <h1>{{ page.title }}</h1>
 <div id="cashGraph" style="width: 100%; height: 400px;"></div>
 <div id="tourneyGraph" style="width: 100%; height: 400px; margin-top: 25px;"></div>
-<div id="liveGraph" style="width: 100%; height: 400px; margin-top: 25px;"></div>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js">
+{"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0AhVaAslT4zEtdENWNl9GMlJYbi12M3RON1dKdXg4NlE&transpose=0&headers=1&range=D1%3AD100&gid=0&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000","fontSize":16},"series":{"0":{"pointSize":7}},"curveType":"","animation":{"duration":0},"width":600,"lineWidth":2,"hAxis":{"useFormatFromData":true,"minValue":null,"viewWindowMode":null,"viewWindow":null,"maxValue":null},"vAxes":[{"useFormatFromData":true,"title":null,"minValue":-10,"viewWindowMode":"explicit","viewWindow":{"min":-10,"max":null},"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindow":{"min":null,"max":null},"maxValue":null}],"title":"Live Poker Winnings","booleanRole":"certainty","height":371,"legend":"right","tooltip":{}},"state":{},"view":{"columns":[{"calc":"emptyString","type":"string","sourceColumn":0},0]},"isDefaultVisualization":false,"chartType":"LineChart","chartName":"Chart 1"}
+</script>
 <script src="/js/jquery-1.11.0.min.js"></script>
 <script src="/js/canvasjs.min.js"></script>
 <script>
@@ -62,37 +64,8 @@ title: Simon's Poker Progress
 		});
 	};
 
-	var renderLiveGraph = function() {
-		$.get( "https://docs.google.com/spreadsheet/tq?key=0AhVaAslT4zEtdENWNl9GMlJYbi12M3RON1dKdXg4NlE&transpose=0&headers=1&range=D1%3AD100&gid=0&pub=1", function( data ) {
-			console.log(data);
-			var m = /.*[(](.*)[);]/g.exec(data);
-			var obj = $.parseJSON(m[1]);
-			var startProfit = 0;
-			var totalProfits = [];
-			$.each(obj.rows, function(i) {
-				var self = this;
-				startProfit = startProfit + self.v;
-				totalProfits.push({label : i + 1, y : startProfit});
-			});
-			var chart = new CanvasJS.Chart("liveGraph", {
-					title : {
-						fontSize : 16,
-						text : "Live Poker (Cash and Tourney) Graph: Total " + totalProfits.length + " Sessions, Profit: " + startProfit.toFixed(2)
-					},
-					data : [
-						{
-							type : "line",
-							dataPoints : totalProfits
-						}
-					]
-			});
-			chart.render();
-		});
-	};
-
 	$(document).ready(function() {
 		renderCashGraph();
 		renderTourneyGraph();
-		renderLiveGraph();
 	});
 </script>
