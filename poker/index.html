@@ -94,6 +94,7 @@ title: Simon's Poker Progress
 				totalProfits.push({label : i + 1, y : startProfit});
 			});
 			var chart = new CanvasJS.Chart("cashGraph", {
+					zoomEnabled: true, 
 					title : {
 						fontSize : 16,
 						text : "Cash Game Graph: Total " + totalProfits.length + " Hands, Profit: " + startProfit.toFixed(2)
@@ -121,6 +122,7 @@ title: Simon's Poker Progress
 				totalProfits.push({label : i + 1, y : startProfit});
 			});
 			var chart = new CanvasJS.Chart("tourneyGraph", {
+					zoomEnabled: true, 
 					title : {
 						fontSize : 16,
 						text : "Tourney Game Graph: Total " + totalProfits.length + " Tourneys, Profit: " + startProfit.toFixed(2)
