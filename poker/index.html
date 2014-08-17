@@ -123,7 +123,7 @@ title: Simon's Poker Progress
 			$.each(data, function(i) {
 				var self = this;
 				startProfit = startProfit + self.profit / 100;
-				totalProfits.push({label : i + 1, y : startProfit});
+				totalProfits.push({label : i, y : startProfit});
 			});
 			var chart = new CanvasJS.Chart("tourneyGraph", {
 					zoomEnabled: true, 
