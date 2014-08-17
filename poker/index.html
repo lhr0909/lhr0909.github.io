@@ -94,7 +94,7 @@ title: Simon's Poker Progress
 					var self = this;
 					var factor = (self.siteId === 23) ? bitcoinPrice / 1000 : 1;
 					startProfit = startProfit + self.totalProfit * factor / 100;
-					totalProfits.push({label : i + 1, y : startProfit});
+					totalProfits.push({label : i, y : startProfit});
 				});
 				var chart = new CanvasJS.Chart("cashGraph", {
 						zoomEnabled: true, 
