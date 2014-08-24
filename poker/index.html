@@ -105,19 +105,19 @@ title: Simon's Poker Progress
 						zoomEnabled: true, 
 						title : {
 							fontSize : 16,
-							text : "Cash Game Graph: Total " + totalProfits.length + " Hands, Profit: " + startProfit.toFixed(2)
+							text : "Cash Game Graph: Total " + totalProfits.length + " Hands, Profit: " + startProfit.toFixed(2) + ", All-In EV: " + startAllInEV.toFixed(2)
 						},
 						data : [
+							{
+								type : "line",
+								color : "orange",
+								dataPoints : totalAllInEVs
+							},
 							{
 								type : "line",
 								color : "darkgreen",
 								dataPoints : totalProfits
 							},
-							{
-								type : "line",
-								color : "orange",
-								dataPoints : totalAllInEVs
-							}
 						]
 				});
 				chart.render();
