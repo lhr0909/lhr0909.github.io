@@ -1,0 +1,21 @@
+<style>
+.audit {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: 200px;
+    overflow-y: auto;
+}
+.audit li {
+    list-style-type: none;
+}
+</style>
+<ul class="audit" ck-audit audits="audits">
+</ul>
+<p>
+    <input ng-model="playerName">
+    <button ng-click="changeName(playerName)">Change Name</button>
+</p>
+<p ng-if="isHost">
+    <button ng-click="startGame()">Start Game!</button>
+</p>
