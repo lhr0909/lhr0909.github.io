@@ -1,3 +1,3 @@
 .content {
-    font-family: monospace;
+    font-family: monospace!important; /* used !important here just to overwrite all fonts */
 }
