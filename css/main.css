@@ -7,3 +7,15 @@
 .content h6 {
     font-family: monospace;
 }
+
+.top-nav,
+.top-nav h1,
+.top-nav h2,
+.top-nav h3,
+.top-nav h4,
+.top-nav h5,
+.top-nav h6,
+.top-nav ul li,
+.top-nav ul li > a {
+    font-family: monospace;
+}
