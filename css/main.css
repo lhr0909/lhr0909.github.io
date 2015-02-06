@@ -1,3 +1,9 @@
-.content {
-    font-family: monospace!important; /* used !important here just to overwrite all fonts */
+.content,
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+    font-family: monospace;
 }
