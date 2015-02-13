@@ -20,7 +20,7 @@
 .top-nav ul li > a,
 .top-nav .toggle-topbar.menu-icon a {
     font-family: monospace;
-    color: black;
+    color: #222222;
     background-color: white;
 }
 
@@ -29,7 +29,7 @@
 }
 
 .top-bar .toggle-topbar.menu-icon a span::after {
-    box-shadow: 0 0 0 1px #000000, 0 7px 0 1px #000000, 0 14px 0 1px #000000;
+    box-shadow: 0 0 0 1px #222222, 0 7px 0 1px #222222, 0 14px 0 1px #222222;
 }
 
 .top-bar.expanded .toggle-topbar.menu-icon a span::after {
