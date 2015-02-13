@@ -10,12 +10,34 @@
 
 .top-nav,
 .top-nav h1,
+.top-nav .name h1 a,
 .top-nav h2,
 .top-nav h3,
 .top-nav h4,
 .top-nav h5,
 .top-nav h6,
 .top-nav ul li,
-.top-nav ul li > a {
+.top-nav ul li > a,
+.top-nav .toggle-topbar.menu-icon a {
     font-family: monospace;
+    color: black;
+    background-color: white;
+}
+
+.top-bar.expanded .toggle-topbar.menu-icon a {
+    color: #888888;
+}
+
+.top-bar .toggle-topbar.menu-icon a span::after {
+    box-shadow: 0 0 0 1px #000000, 0 7px 0 1px #000000, 0 14px 0 1px #000000;
+}
+
+.top-bar.expanded .toggle-topbar.menu-icon a span::after {
+    box-shadow: 0 0 0 1px #888888, 0 7px 0 1px #888888, 0 14px 0 1px #888888;
+}
+
+.top-bar,
+.top-bar-section li:not(.has-form) a:not(.button),
+.top-bar.expanded .title-area {
+    background-color: white;
 }
