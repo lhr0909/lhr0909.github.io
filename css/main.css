@@ -41,3 +41,7 @@
 .top-bar.expanded .title-area {
     background-color: white;
 }
+
+#resume {
+    min-width: 900px;
+}
