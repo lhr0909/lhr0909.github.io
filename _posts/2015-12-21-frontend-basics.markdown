@@ -65,6 +65,14 @@ I may or may not translate this later on for my blog purposes, but for now, you 
 
 要使用CSS，首先要指定了HTML的`id`或`class`属性。他们是有指代性的标签，其中`id`具有唯一性，如果网页有多个HTML标签拥有相同`id`的时候，会出问题的唷！下面看例子：
 
-<iframe width="100%" height="310" src="//jsfiddle.net/lhr0909/8sd9qjzb/embedded/html,css,result" frameborder="0"></iframe>
+<iframe width="100%" height="310" src="//jsfiddle.net/lhr0909/8sd9qjzb/1/embedded/html,css,result" frameborder="0"></iframe>
+
+以下这个是用最新CSS3做出来的载入效果：
+
+<p data-height="268" data-theme-id="0" data-slug-hash="Hdnuv" data-default-tab="result" data-user="resourceguru" class='codepen'>See the Pen <a href='http://codepen.io/resourceguru/pen/Hdnuv/'>Chrome Cast Loader</a> by Resource Guru (<a href='http://codepen.io/resourceguru'>@resourceguru</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+CSS我觉得重点是要看下这个叫做[box model](http://www.w3school.com.cn/css/css_boxmodel.asp)，这个概念掌握好了基本的排版就可以做得比较精确了。下面给个[人家做的例子](http://jsfiddle.net/blinkmacalahan/mrKPC/)，简单地显示了这个框模型的感觉（请自行把CSS里面的注释符号去掉，然后点左上角的Run）。
+
 
 # JavaScript
