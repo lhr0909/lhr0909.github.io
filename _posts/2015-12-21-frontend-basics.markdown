@@ -50,7 +50,7 @@ I may or may not translate this later on for my blog purposes, but for now, you 
 
 再看下下面这个例子，我们通过调整每个标签都有的style属性，来调整一下每个段落的颜色和排版：
 
-<iframe width="100%" height="300" src="//jsfiddle.net/lhr0909/g2aju4j4/1/embedded/html,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="310" src="//jsfiddle.net/lhr0909/g2aju4j4/1/embedded/html,result"  frameborder="0"></iframe>
 
 不知道大家有没有发现几个问题：
 
@@ -61,6 +61,10 @@ I may or may not translate this later on for my blog purposes, but for now, you 
 
 # CSS
 
+[CSS](http://www.w3school.com.cn/css/css_intro.asp)就是在网页一开始准备变得越来越复杂的时候，人们为了解决上面两个问题而指定的新标准语法。CSS是纯粹的为排版服务，并不会给网页提供内容。现在最高版本是CSS3，给CSS添加了一些动画效果，还有上面提到的根据屏幕宽度定义不同排版的功能。
 
+要使用CSS，首先要指定了HTML的`id`或`class`属性。他们是有指代性的标签，其中`id`具有唯一性，如果网页有多个HTML标签拥有相同`id`的时候，会出问题的唷！下面看例子：
+
+<iframe width="100%" height="310" src="//jsfiddle.net/lhr0909/8sd9qjzb/embedded/html,css,result" frameborder="0"></iframe>
 
 # JavaScript
