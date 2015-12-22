@@ -42,4 +42,25 @@ I may or may not translate this later on for my blog purposes, but for now, you 
 
 [HTML](http://www.w3school.com.cn/html/html_intro.asp)的全称比较长，而且也没有什么实际意义哈哈。基本上是一种能够标记修饰文本，然后让这段文本能实现更多的功能，比如说提供链接到另一个网页，调整大小等等。想象一下我们手工写黑板报的时候我们可以给文字指定颜色和大小和位置，但是要是我们需要用电脑来写黑板报的话，我们应该怎么样给这些文字进行修饰和调整。HTML可以帮我们实现这样的功能。
 
-<iframe width="100%" height="300" src="//jsfiddle.net/8uxrskz7/8/embedded/html,result" frameborder="0"></iframe>
+下面给出了HTML源代码，和对应的效果（点Result可以看到对应的效果）：
+
+<iframe width="100%" height="310" src="//jsfiddle.net/8uxrskz7/8/embedded/html,result" frameborder="0"></iframe>
+
+刚才看到上面的链接和图片对应的源代码了吗？源代码是不是比其他简单的效果要长？HTML标签里面是可以给标签设置某些属性（Atrribute）的。能够灵活运用这些属性我们其实已经可以做到不少的东西了。
+
+再看下下面这个例子，我们通过调整每个标签都有的style属性，来调整一下每个段落的颜色和排版：
+
+<iframe width="100%" height="300" src="//jsfiddle.net/lhr0909/g2aju4j4/1/embedded/html,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+不知道大家有没有发现几个问题：
+
+* 怎么这个style属性这么强大？里面到底写的是什么语法？
+* 如果我的网页里面标签很多，逐个逐个排版岂不会累死？
+
+嗯，没错。接下来我给大家继续介绍第二个语言——CSS。
+
+# CSS
+
+
+
+# JavaScript
