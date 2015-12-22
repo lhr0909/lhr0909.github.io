@@ -29,7 +29,7 @@ I may or may not translate this later on for my blog purposes, but for now, you 
 
 从2014年初开始，因为分配到一个针对前端的队伍，而且是卖女装的前端，所以我们组对前端的要求越来越高，接触前端技术的时间也越来越多。短暂的玩过iOS前端之后，我被分配到做一个用Angular搭建一个和我们iOS做的App类似的WebApp。之后我就对现代网页框架开始研究，整个2015年是玩了半年Angular然后玩了半年Mithril（Mithril这个project等我们把feature公开了我就放上来）。期间做了些对于CSS3部分动画效果在手机上运行和兼容性的理解，和对HTML5 Canvas还有WebGL Canvas的性能和兼容性的探讨。看过了这篇[关于Flipboard做的react-canvas](http://engineering.flipboard.com/2015/02/mobile-web/)之后，我和一个前端高手合作做了一个用Backbone来跑一个Pixi.js控制的WebGL Canvas的prototype。
 
-现在我在做几个专门针对微信自带浏览器的[小游戏](http://www.divby0.io/SongQuiz/v0/?/cn)（不是神经猫）的[prototype](http://www.divby0.io/ThePullUpGame/)，希望以后在空余的时间可以玩更多前端的东西。
+现在我在做几个专门针对微信自带浏览器的[小游戏](http://www.divby0.io/SongQuiz/v0/?/cn)的[prototype](http://www.divby0.io/ThePullUpGame/)，希望以后在空余的时间可以玩更多前端的东西。
 
 （怀旧的分割线）
 ***
@@ -76,3 +76,7 @@ CSS我觉得重点是要看下这个叫做[box model](http://www.w3school.com.cn
 
 
 # JavaScript
+
+[JavaScript](http://www.w3school.com.cn/b.asp)是一个网页的脚本语言。这个暂时就不多说了，先给个例子：
+
+<iframe width="100%" height="300" src="//jsfiddle.net/lhr0909/5aumxh37/embedded/html,css,js,result" frameborder="0"></iframe>
