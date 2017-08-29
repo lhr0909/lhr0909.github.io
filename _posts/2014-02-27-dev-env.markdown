@@ -1,8 +1,9 @@
 ---
+title: Thoughts about Development Environment
+date: 2014-02-27 16:00:00 Z
+categories:
+- development
 layout: post
-title:  "Thoughts about Development Environment"
-date:   2014-02-27 16:00:00
-categories: development
 ---
 
 Recently I was working on Clappy Bird with my coworker Jiho, and majority of the development time was done over one weekend. Friday evening after work, I went to his apartment to start hacking. We decided that we shouldn't use our company hardware for this (I only had my company mac with me), so he said that I could use his desktop for now, which is a Windows machine loaded up with ADT Eclipse, no biggie. It didn't have much hassle, but after all, it is a Windows machine, it is just not that good for development where you want a good shell and do mad things with. So I decided I should bring my laptop over the next day.

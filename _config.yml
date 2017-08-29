@@ -1,6 +1,15 @@
+---
+title: Lhr0909.Github.Io
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
 name: Simon Haoran Liang
 markdown: redcarpet
 pygments: true
 safe: true
 lsi: false
-pygments: true

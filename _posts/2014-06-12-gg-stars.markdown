@@ -1,9 +1,11 @@
 ---
+title: Me 0 - 1 Stars
+date: 2014-06-12 02:11:00 Z
+categories:
+- poker
 layout: post
-title:  "Me 0 - 1 Stars"
-date:   2014-06-12 02:11:00
-categories: poker
 ---
+
 Bit the bullet and actually did this: playing on stars.
 
 The way I was setting that shit up should be 100% stealth, but I got cocky and went with a dangerous way after a while.
