@@ -4,6 +4,7 @@ date: 2014-06-12 02:11:00 Z
 categories:
 - poker
 layout: post
+comments: true
 ---
 
 Bit the bullet and actually did this: playing on stars.
