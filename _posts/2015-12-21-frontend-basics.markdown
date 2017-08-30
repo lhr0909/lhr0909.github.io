@@ -4,6 +4,7 @@ date: 2015-12-21 19:00:00 Z
 categories:
 - development
 layout: post
+comments: true
 ---
 
 这篇博客是为了码妞儿2015冬季的活动来准备的。本来想直接放到活动的wiki里面，但是发现[jsfiddle](http://jsfiddle.net)不能内嵌到github的wiki页面里面。所以就借我的博客来写吧。[如果想直接跳到教程的点这里](#main)
