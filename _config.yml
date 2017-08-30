@@ -10,6 +10,6 @@ collections:
     output: true
 name: Simon Haoran Liang
 markdown: kramdown
-pygments: true
+highlighter: rouge
 safe: true
 lsi: false
