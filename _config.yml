@@ -9,7 +9,7 @@ collections:
     title: Uploads
     output: true
 name: Simon Haoran Liang
-markdown: redcarpet
+markdown: kramdown
 pygments: true
 safe: true
 lsi: false
