@@ -1,6 +1,10 @@
 ---
 title: Run Equilab on MacOS with WineBottler
 date: 2017-09-03 04:30:00 Z
+categories:
+- poker
+tags:
+- poker
 ---
 
 I really liked to use Equilab as my poker learning tools. Back when I had a Windows computer, I would put in some of my hands from a session to do some range analysis. However, now with a Mac, there isn't an equivalent tool on the platform that is as good as Equilab. So I decided to try out running Equilab directly on MacOS.
