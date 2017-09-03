@@ -1,6 +1,6 @@
 ---
 title: Run Equilab on MacOS with WineBottler
-date: 2017-09-03 04:30:00 Z
+date: 2017-09-03 12:30:00 Z
 categories:
 - poker
 tags:
