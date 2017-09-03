@@ -26,4 +26,4 @@ At the end The App bundle will be created, and when we open it, the Equilab inte
 
 ![Equilab on Mac](/uploads/Screen%20Shot%202017-09-03%20at%2012.27.16%20PM.png)
 
-Hope you find the guide useful, and if you have questions, feel free to comment down below and I will be happy to answer. If anyone would love to get a final bundled version by me, feel free to comment below to let me know. If there is enough requests, I will upload one.
+Hope you find the guide useful, and if you have questions, feel free to comment down below and I will be happy to answer. If anyone would love to get a final bundled version by me, you can find it [here](https://drive.google.com/file/d/0BxVaAslT4zEtMzVoZkRlMHBjRGs/view?usp=sharing).
