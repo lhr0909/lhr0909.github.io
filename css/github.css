@@ -1,3 +1,18 @@
+.highlighter-rouge {
+  color: #d01040;
+}
+
+pre.highlight {
+  border: 1px solid #dfdfdf;
+  padding: 1rem;
+  background-color: #f8f8f8;
+  margin-bottom: 1.25rem;
+}
+
+pre.highlight > code {
+  border: none;
+}
+
 /* https://github.com/jwarby/jekyll-pygments-themes/blob/master/github.css */
 
 .highlight .hll { background-color: #ffffcc }
