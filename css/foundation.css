@@ -3396,7 +3396,7 @@ ul.pagination {
     float: left;
     display: block; }
 
-/* Pagination centred wrapper */
+/* Pagination centered wrapper */
 .pagination-centered {
   text-align: center; }
   .pagination-centered ul.pagination li {
