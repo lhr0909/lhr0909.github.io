@@ -172,7 +172,7 @@
 
       this.settings = $this.data(this.attr_name(true) + '-init');
 
-      // non configureable settings
+      // non configurable settings
       this.settings.$content_el = $this;
       this.settings.$body = $(this.settings.tip_container);
       this.settings.body_offset = $(this.settings.tip_container).position();
@@ -384,7 +384,7 @@
 
           this.settings.$current_tip = this.settings.$next_tip;
 
-        // skip non-existant targets
+        // skip non-existent targets
         } else if (this.settings.$li && this.settings.$target.length < 1) {
 
           this.show(init, is_prev);
