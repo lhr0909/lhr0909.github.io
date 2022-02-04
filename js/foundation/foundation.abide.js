@@ -10,7 +10,7 @@
       live_validate : true,
       validate_on_blur : true,
       focus_on_invalid : true,
-      error_labels : true, // labels with a for="inputId" will recieve an `error` class
+      error_labels : true, // labels with a for="inputId" will receive an `error` class
       error_class : 'error',
       timeout : 1000,
       patterns : {

@@ -22,7 +22,7 @@
 
       this.bindings(method, options);
 
-      // store the initial href, which is used to allow correct behaviour of the
+      // store the initial href, which is used to allow correct behavior of the
       // browser back button when deep linking is turned on.
       self.entry_location = window.location.href;
 
@@ -167,7 +167,7 @@
 
           },
           go_to_hash = function(hash) {
-            // This function allows correct behaviour of the browser's back button when deep linking is enabled. Without it
+            // This function allows correct behavior of the browser's back button when deep linking is enabled. Without it
             // the user would get continually redirected to the default hash.
             var is_entry_location = window.location.href === self.entry_location,
                 default_hash = settings.scroll_to_content ? self.default_tab_hashes[0] : is_entry_location ? window.location.hash :'fndtn-' + self.default_tab_hashes[0].replace('#', '')
