@@ -6,7 +6,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
 export const GET: APIRoute = async (context) => {
   const posts = (await getCollection("blog")).sort(
-    (a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf()
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
   );
   return rss({
     title: SITE_TITLE,
