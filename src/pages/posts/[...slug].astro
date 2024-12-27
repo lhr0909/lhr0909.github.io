@@ -43,6 +43,6 @@ const { Content } = await render(post);
         ))
       }
     </ul>
-    <Disqus embed="https://lhr0909.disqus.com/embed.js" />
+    <Disqus url={post.data.oldUrl} embed="https://lhr0909.disqus.com/embed.js" />
   </Fragment>
 </Layout>

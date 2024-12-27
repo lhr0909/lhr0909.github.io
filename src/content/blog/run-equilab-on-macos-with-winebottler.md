@@ -1,6 +1,7 @@
 ---
 title: Run Equilab on MacOS with WineBottler
 pubDate: 2017-09-03
+oldUrl: http://www.divby0.io/poker/2017/09/03/run-equilab-on-macos-with-winebottler.html
 tags:
   - poker
 ---
