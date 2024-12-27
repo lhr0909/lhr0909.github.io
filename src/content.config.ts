@@ -16,9 +16,9 @@ const blog = defineCollection({
   }),
 });
 
-const intro = defineCollection({
-  loader: file('./src/content/intro.md'),
+const info = defineCollection({
+  loader: glob({ base: './src/content/info', pattern: '**/*.{md,mdx}' }),
   schema: z.any(),
 });
 
-export const collections = { blog, intro };
+export const collections = { blog, info };

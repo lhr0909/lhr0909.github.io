@@ -5,7 +5,6 @@ import Footer from "../../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 import { getCollection } from "astro:content";
 import FormattedDate from "../../components/FormattedDate.astro";
-import SearchBar from "../../components/SearchBar.astro";
 import Nav from "../../components/Nav.astro";
 
 const posts = (await getCollection("blog")).sort(
@@ -29,7 +28,6 @@ const uniqueTags = [
       <Nav />
     </Header>
     <main>
-      <SearchBar />
       <ul class="blog-posts">
         {
           posts.map((post) => (
@@ -39,7 +37,7 @@ const uniqueTags = [
                   <FormattedDate date={post.data.pubDate} />
                 </i>
               </span>
-              <a href={`/blog/${post.slug}/`}>{post.data.title}</a>
+              <a href={`/blog/${post.id}/`}>{post.data.title}</a>
             </li>
           ))
         }
