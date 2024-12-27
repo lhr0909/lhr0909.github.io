@@ -3,8 +3,7 @@ title: Render High Quality Videos of Terminal Outputs
 description: Use Remotion and Asciinema to render high quality terminal outputs for coding videos.
 pubDate: 2023-01-28
 tags:
-  - remotion
-  - asciinema
+  - video
 ---
 
 I post videos [on YouTube](https://youtube.com/@simon_liang) talking about technology (mainly AI) and showcasing my side projects online. One thing I struggle a lot is to create high quality visualizations of code and terminal outputs in the videos. When you check out videos from accounts like [Fireship](https://www.youtube.com/@Fireship) and [ByteByteGo](https://www.youtube.com/c/ByteByteGo), you will find their visuals very clear and crisp, and it takes a lot of time to record and edit using various softwares. When I started making videos myself, I definitely felt the amount of effort in production to take the videos to the next level.

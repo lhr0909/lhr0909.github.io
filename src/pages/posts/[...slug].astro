@@ -1,5 +1,6 @@
 ---
 import { type CollectionEntry, getCollection, render } from "astro:content";
+import { Disqus } from "astro-disqus";
 
 import Layout from "@/layouts/Layout.astro";
 import FormattedDate from "@/components/FormattedDate.astro";
@@ -22,7 +23,9 @@ const { Content } = await render(post);
   <Fragment slot="content">
     <div class="flex flex-col space-y-2 mb-4">
       <h1 class="text-2xl font-medium">{post.data.title}</h1>
-      <p class="hidden">{post.data.description}</p>
+      {post.data.description && (
+        <p class="hidden">{post.data.description}</p>
+      )}
       <FormattedDate date={post.data.pubDate} />
     </div>
     <Prose>
@@ -40,4 +43,5 @@ const { Content } = await render(post);
       }
     </ul>
   </Fragment>
+  <Disqus embed="https://lhr0909.disqus.com/embed.js" />
 </Layout>
