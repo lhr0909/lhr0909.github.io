@@ -41,7 +41,7 @@ const { posts } = Astro.props;
             <span class="text-gray-500 text-xs md:text-sm">
                 <FormattedDate date={post.data.pubDate} />
             </span>
-            <a href={`/blog/${post.id}/`} class="text-blue-500 md:text-lg">{post.data.title}</a>
+            <a href={`/posts/${post.id}/`} class="text-blue-500 md:text-lg">{post.data.title}</a>
           </li>
         ))
       }
