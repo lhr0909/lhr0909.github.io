@@ -1,11 +1,7 @@
 ---
+import FormattedDate from "@/components/FormattedDate.astro";
+import Layout from "@/layouts/Layout.astro";
 import { getCollection } from "astro:content";
-import BaseHead from "../../components/BaseHead.astro";
-import Footer from "../../components/Footer.astro";
-import FormattedDate from "../../components/FormattedDate.astro";
-import Header from "../../components/Header.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
-import Nav from "../../components/Nav.astro";
 
 export async function getStaticPaths() {
   const allPosts = (await getCollection("blog")).sort(
@@ -35,32 +31,20 @@ const { tag } = Astro.params;
 const { posts } = Astro.props;
 ---
 
-<html lang="en">
-  <head>
-    <BaseHead title={tag} description={SITE_DESCRIPTION} />
-  </head>
-  <body>
-    <Header>
-      <Nav />
-    </Header>
-    <main>
-      <h3 class="filter-title">Filtering for "{tag}"</h3>
-      <a href="/blog" class="remove-filter">Remove filter</a>
-      <ul class="blog-posts">
-        {
-          posts.map((post) => (
-            <li>
-              <span>
-                <i>
-                  <FormattedDate date={post.data.pubDate} />
-                </i>
-              </span>
-              <a href={`/blog/${post.slug}/`}>{post.data.title}</a>
-            </li>
-          ))
-        }
-      </ul>
-    </main>
-    <Footer />
-  </body>
-</html>
+<Layout>
+  <Fragment slot="content">
+    <h1 class="text-2xl font-medium">Posts with Tag "{tag}"</h1>
+    <ul>
+      {
+        posts.map((post) => (
+          <li class="flex space-x-2 items-baseline">
+            <span class="text-gray-500 text-xs md:text-sm">
+                <FormattedDate date={post.data.pubDate} />
+            </span>
+            <a href={`/blog/${post.id}/`} class="text-blue-500 md:text-lg">{post.data.title}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </Fragment>
+</Layout>

@@ -1,11 +1,7 @@
 ---
-import BaseHead from "../../components/BaseHead.astro";
-import Header from "../../components/Header.astro";
-import Footer from "../../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 import { getCollection } from "astro:content";
-import FormattedDate from "../../components/FormattedDate.astro";
-import Nav from "../../components/Nav.astro";
+import FormattedDate from "@/components/FormattedDate.astro";
+import Layout from "@/layouts/Layout.astro";
 
 const posts = (await getCollection("blog")).sort(
   (b, a) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
@@ -18,40 +14,34 @@ const uniqueTags = [
 ].sort();
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <BaseHead title="Blog" description={SITE_DESCRIPTION} />
-  </head>
-  <body>
-    <Header>
-      <Nav />
-    </Header>
-    <main>
-      <ul class="blog-posts">
+<Layout>
+  <Fragment slot="content">
+    <div class="flex flex-col space-y-2">
+      <h1 class="text-2xl font-medium">Blog Posts</h1>
+      <ul>
         {
           posts.map((post) => (
-            <li>
-              <span>
-                <i>
-                  <FormattedDate date={post.data.pubDate} />
-                </i>
-              </span>
-              <a href={`/blog/${post.id}/`}>{post.data.title}</a>
+            <li class="flex space-x-2 items-baseline">
+              <FormattedDate date={post.data.pubDate} />
+              <a href={`/blog/${post.id}/`} class="text-blue-500 md:text-lg">{post.data.title}</a>
             </li>
           ))
         }
       </ul>
-      <div class="tags">
+    </div>
+    <div class="flex flex-col space-y-2">
+      <h2 class="text-xl font-medium tracking-tight">Tags</h2>
+      <ul class="flex flex-col space-x-0 space-y-1 md:flex-row md:space-x-2 md:space-y-0 md:flex-wrap">
         {
           uniqueTags.map((tag) => (
-            <a class="tag" href={`/tags/${tag}/`}>
-              #{tag}
-            </a>
+            <li>
+              <a class="text-blue-500" href={`/tags/${tag}/`}>
+                #{tag}
+              </a>
+            </li>
           ))
         }
-      </div>
-    </main>
-    <Footer />
-  </body>
-</html>
+      </ul>
+    </div>
+  </Fragment>
+</Layout>

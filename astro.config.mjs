@@ -8,5 +8,5 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
     site: 'https://divby0.io',
-    integrations: [mdx(), sitemap()],
+    integrations: [mdx(), sitemap(), tailwind()],
 });

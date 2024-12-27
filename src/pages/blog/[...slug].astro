@@ -1,7 +1,9 @@
 ---
-import { type CollectionEntry, getCollection } from "astro:content";
-import BlogPost from "../../layouts/BlogPost.astro";
-import { render } from "astro:content";
+import { type CollectionEntry, getCollection, render } from "astro:content";
+
+import Layout from "@/layouts/Layout.astro";
+import FormattedDate from "@/components/FormattedDate.astro";
+import Prose from "@/components/Prose.astro";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
@@ -16,6 +18,26 @@ const post = Astro.props;
 const { Content } = await render(post);
 ---
 
-<BlogPost {...post.data}>
-  <Content />
-</BlogPost>
+<Layout>
+  <Fragment slot="content">
+    <div class="flex flex-col space-y-2 mb-4">
+      <h1 class="text-2xl font-medium">{post.data.title}</h1>
+      <p class="hidden">{post.data.description}</p>
+      <FormattedDate date={post.data.pubDate} />
+    </div>
+    <Prose>
+      <Content />
+    </Prose>
+    <ul>
+      {
+        post.data.tags?.map((tag) => (
+          <li>
+            <a class="text-blue-500" href={`/tags/${tag}/`}>
+              #{tag}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </Fragment>
+</Layout>
