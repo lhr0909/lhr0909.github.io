@@ -25,8 +25,8 @@ Thanks everyone who participated the project, especially Jiho for making this ha
 
 Game Graphics:
 
-![Screenshot 0](/clb-screenshot-0.png)
+![Screenshot 0](../images/clb-screenshot-0.png)
 
-![Screenshot 1](/clb-screenshot-1.png)
+![Screenshot 1](../images/clb-screenshot-1.png)
 
-![Screenshot 2](/clb-screenshot-2.png)
+![Screenshot 2](../images/clb-screenshot-2.png)

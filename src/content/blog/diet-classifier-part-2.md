@@ -22,8 +22,8 @@ Once this loss function is figured out, all I need to do is to implement it usin
 
 I have updated the source code on GitHub so you guys can check it out. To demonstrate the difference, I am plotting the embeddings in 2D space between the old and new loss functions. Thankfully, Jina’s DocArray package has a handy `plot_embeddings` method in the DocumentArray class, which helps me visualize the embeddings very easily. The difference is quite big between these two loss functions.
 
-![Embeddings before Training](/embeddings-before.png)
+![Embeddings before Training](../images/embeddings-before.png)
 
-![Embeddings after Training](/embeddings-after.png)
+![Embeddings after Training](../images/embeddings-after.png)
 
 Now with the properly implemented loss function, I can comfortably work on the transformer encoding layers in Part 3!

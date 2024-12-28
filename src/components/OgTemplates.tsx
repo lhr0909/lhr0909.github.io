@@ -1,6 +1,6 @@
 import fs from "node:fs";
 
-const image = fs.readFileSync("./public/simonliang.jpg");
+const image = fs.readFileSync("./src/content/images/simonliang.jpg");
 const imageDataUrl = `data:image/jpeg;base64,${image.toString("base64")}`;
 
 export function HomeOgTemplate() {
