@@ -6,7 +6,7 @@ import { OgTemplate } from "@/components/OgTemplate";
 
 export const GET: APIRoute = async ({ props }) => {
   const fontFile = await fetch(
-    "https://og-playground.vercel.app/inter-latin-ext-700-normal.woff"
+    "https://www.divby0.io/InterVariable.woff"
   );
   const fontData: ArrayBuffer = await fontFile.arrayBuffer();
 
