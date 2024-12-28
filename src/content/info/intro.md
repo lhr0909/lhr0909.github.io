@@ -5,3 +5,7 @@ Hi! 👋
 My name is Simon Liang and I am an indie hacker, a digital nomad.
 
 Expertise: TypeScript, Python, Swift
+
+Current MRR (Monthly Recurring Revenue):
+
+🟨⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️ $1000/m
