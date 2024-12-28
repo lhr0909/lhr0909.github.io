@@ -4,6 +4,7 @@ import { getCollection, getEntry, render } from 'astro:content';
 import Layout from "../layouts/Layout.astro";
 import Prose from '../components/Prose.astro';
 import FormattedDate from '@/components/FormattedDate.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '@/consts';
 
 const entry = await getEntry("info", "intro");
 const { Content } = await render(entry!);
@@ -19,7 +20,18 @@ const uniqueTags = [
 ].sort();
 ---
 
-<Layout>
+<Layout
+  openGraph={{
+    basic: {
+      title: SITE_TITLE,
+      type: "website",
+      image: `${Astro.site}og.png`,
+    },
+    optional: {
+      description: SITE_DESCRIPTION,
+    },
+  }}
+>
   <Fragment slot="content">
     <Prose>
       <Content />

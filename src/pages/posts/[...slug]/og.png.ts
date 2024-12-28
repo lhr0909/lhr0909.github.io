@@ -1,26 +1,29 @@
 import type { APIRoute } from "astro";
 import { satoriAstroOG } from "satori-astro";
 import { getCollection } from "astro:content";
+import fs from "node:fs/promises";
 
-import { OgTemplate } from "@/components/OgTemplate";
+import { PostOgTemplate } from "@/components/OgTemplates";
 
 export const GET: APIRoute = async ({ props }) => {
-  const fontFile = await fetch(
-    "https://og-playground.vercel.app/inter-latin-ext-700-normal.woff"
-    // "https://www.divby0.io/InterVariable.woff"
-  );
-  const fontData: ArrayBuffer = await fontFile.arrayBuffer();
+  // const fontFile = await fetch(
+  //   "https://www.divby0.io/Inter-SemiBold.woff"
+  // );
+  // const fontData: ArrayBuffer = await fontFile.arrayBuffer();
+
+  const fontData = await fs.readFile('./public/Inter-SemiBold.woff');
 
   return await satoriAstroOG({
-    template: OgTemplate({ title: props.data.title }),
+    template: PostOgTemplate({ title: props.data.title }),
     width: 1200,
     height: 600,
   }).toResponse({
     satori: {
       fonts: [
         {
-          name: "Inter Latin",
+          name: "Inter",
           data: fontData,
+          weight: 600,
           style: "normal",
         },
       ],
