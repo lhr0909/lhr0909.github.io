@@ -43,7 +43,7 @@ const uniqueTags = [
           posts.map((post) => (
             <li class="flex flex-col space-x-0 md:flex-row md:space-x-2 md:items-baseline">
               <FormattedDate date={post.data.pubDate} />
-              <a href={`/posts/${post.id}/`} class="text-blue-500 md:text-lg">{post.data.title}</a>
+              <a href={`/posts/${post.id}/`} class="text-blue-500 md:text-lg hover:underline">{post.data.title}</a>
             </li>
           ))
         }
