@@ -76,18 +76,19 @@ The only caveat I ran into is that [it conflicts with Starlight](https://github.
 
 ```
 diff --git a/i18n.d.ts b/i18n.d.ts
-index 8cb82217cd7b2ffbab5262c44452a87ac724f452..43234390ba8240cd37a69ecc047d64d7f6f0b471 100644
+index 8cb82217cd7b2ffbab5262c44452a87ac724f452..2c7825fa257491c3951800043fef4384bb7ef891 100644
 --- a/i18n.d.ts
 +++ b/i18n.d.ts
-@@ -10,7 +10,7 @@ import 'i18next';
+@@ -10,8 +10,8 @@ import 'i18next';
 
  declare module 'i18next' {
  	interface CustomTypeOptions {
 -		defaultNS: typeof import('./utils/createTranslationSystem').I18nextNamespace;
-+		defaultNS?: string;
  		resources: {
++			translation: Record<string, string>;
  			starlight: Record<import('./utils/createTranslationSystem').I18nKeys, string>;
  		};
+ 	}
 ```
 
 I hope this helps you if you are looking to add i18next to your Astro project.
