@@ -13,7 +13,7 @@ export const GET: APIRoute = async (context) => {
     description: SITE_DESCRIPTION,
     site: context.site as URL,
     items: posts.map(({ data, id }) => ({
-      link: `blog/${id}`,
+      link: `/posts/${id}`,
       title: data.title,
       description: data.description,
       pubDate: data.pubDate,

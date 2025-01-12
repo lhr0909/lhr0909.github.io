@@ -1,0 +1,35 @@
+name: Sync content from S3
+
+on:
+  # Allows you to run this workflow manually from the Actions tab on GitHub.
+  workflow_dispatch:
+
+# Allow this job to clone the repo and create a page deployment
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download mc client
+        uses: yakubique/setup-minio-cli@v1
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: create new branch with git
+        run: git checkout -b ${{ github.run_id }}
+      - name: Run mc cp
+        run: |
+          mc cp --recursive vault/${{ secrets.SOURCE_PATH }} ./${{ secrets.DEST_PATH }}
+        env:
+          MC_HOST_vault: "https://${{ secrets.MINIO_ACCESS_KEY }}:${{ secrets.MINIO_SECRET_KEY }}@${{ secrets.MINIO_ENDPOINT }}"
+      - name: Commit and push changes
+        run: |
+          git add .
+          git commit -m "Sync content from S3"
+          git push origin ${{ github.run_id }}
+      - name: Create a pull request
+        run: gh pr create -B ${{ github.run_id }} -H ${{ github.event.repository.default_branch }} --title 'Sync content from S3' --body 'Created by Github action'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
