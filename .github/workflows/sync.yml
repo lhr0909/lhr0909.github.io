@@ -21,6 +21,7 @@ jobs:
         run: git checkout -b ${{ github.run_id }}
       - name: Run mc cp
         run: |
+          echo $MC_HOST_vault
           mc cp --recursive vault/${{ vars.SRC_PATH }} ./${{ vars.DEST_PATH }}
         env:
           MC_HOST_vault: "https://${{ secrets.MINIO_ACCESS_KEY }}:${{ secrets.MINIO_SECRET_KEY }}@${{ secrets.MINIO_ENDPOINT }}"
