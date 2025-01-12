@@ -32,6 +32,6 @@ jobs:
           git commit -m "Sync content from S3"
           git push origin ${{ github.run_id }}
       - name: Create a pull request
-        run: gh pr create -B ${{ github.run_id }} -H ${{ github.event.repository.default_branch }} --title 'Sync content from S3' --body 'Created via GitHub Actions'
+        run: gh pr create -B ${{ github.event.repository.default_branch }} -H ${{ github.run_id }} --title 'Sync content from S3' --body 'Created via GitHub Actions'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
