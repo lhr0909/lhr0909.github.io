@@ -21,8 +21,7 @@ jobs:
         run: git checkout -b ${{ github.run_id }}
       - name: Run mc cp
         run: |
-          mc cp --recursive r2/obsidian-vault/${{ vars.SRC_PATH }}/blog ./${{ vars.DEST_PATH }}/blog
-          mc cp --recursive r2/obsidian-vault/${{ vars.SRC_PATH }}/images ./${{ vars.DEST_PATH }}/images
+          mc cp --recursive r2/obsidian-vault/${{ vars.SRC_PATH }} ./${{ vars.DEST_PATH }}
         env:
           MC_HOST_r2: "https://${{ secrets.MINIO_ACCESS_KEY }}:${{ secrets.MINIO_SECRET_KEY }}@${{ secrets.MINIO_ENDPOINT }}"
       - name: Commit and push changes
