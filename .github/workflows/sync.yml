@@ -22,9 +22,9 @@ jobs:
       - name: Run mc cp
         run: |
           mc alias list
-          mc cp --recursive vault/${{ vars.SRC_PATH }} ./${{ vars.DEST_PATH }}
+          mc cp --recursive r2/obsidian-vault/${{ vars.SRC_PATH }} ./${{ vars.DEST_PATH }}
         env:
-          MC_HOST_vault: "https://${{ secrets.MINIO_ACCESS_KEY }}:${{ secrets.MINIO_SECRET_KEY }}@${{ secrets.MINIO_ENDPOINT }}"
+          MC_HOST_r2: "https://${{ secrets.MINIO_ACCESS_KEY }}:${{ secrets.MINIO_SECRET_KEY }}@${{ secrets.MINIO_ENDPOINT }}"
       - name: Commit and push changes
         run: |
           git add .
