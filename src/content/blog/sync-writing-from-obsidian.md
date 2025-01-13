@@ -26,7 +26,7 @@ With this in mind, I started working on a new blog system for me to write, and s
 
 First step is to find a way to render Markdown files into web pages. As of 2024, Astro fits the description the best, so I put together the Astro site.
 
-Next step is to work on the syncing of posts. Currently I mainly rely on iCloud for syncing notes between devices, but this community plugin called Remotely Save can help me synchronize the Obsidian vault into an S3 object storage bucket. Now the solution became clear - I just need to grab the blog posts from my Obsidian vault on S3 into the blog repository on GitHub.
+Next step is to work on the syncing of posts. Currently I mainly rely on iCloud for syncing my Obsidian notes between devices, but this community plugin called Remotely Save can help me synchronize the Obsidian vault into an S3 object storage bucket. Now the solution becomes clear - I just need to grab the blog posts from my Obsidian vault on S3 into the blog repository on GitHub.
 
 At the beginning I was thinking to set up a custom Obsidian plugin to do so, but then I realized that I could just set up a GitHub Action from my blog to do the syncing. Here is the workflow that I put into the `.github/workflows` folder of the blog repo:
 
@@ -78,6 +78,6 @@ When I finish writing, all I need to do is to go on GitHub (either with mobile a
 
 With this system set up, I can finally have the comfort of creating content anywhere. I have fully embraced the way Tim Ferris writes down notes on the phone with a keyboard, I also bring a foldable keyboard with me if I go out. Check this out:
 
-![A picture of me writing using a foldable keyboard and a phone](#)
+![A picture of me writing using a foldable keyboard and a phone](writings/personal/content/images/foldable-keyboard.jpeg)
 
 Thank you for reading this far. I know this still feels over-engineered to some people, but it checks all the boxes for me, and more importantly, I have fun building it! I think that’s what matters.
