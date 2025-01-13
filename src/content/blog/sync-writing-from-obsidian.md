@@ -78,6 +78,6 @@ When I finish writing, all I need to do is to go on GitHub (either with mobile a
 
 With this system set up, I can finally have the comfort of creating content anywhere. I have fully embraced the way Tim Ferris writes down notes on the phone with a keyboard, I also bring a foldable keyboard with me if I go out. Check this out:
 
-![A picture of me writing using a foldable keyboard and a phone](writings/personal/content/images/foldable-keyboard.jpeg)
+![A picture of me writing using a foldable keyboard and a phone](../images/foldable-keyboard.jpeg)
 
 Thank you for reading this far. I know this still feels over-engineered to some people, but it checks all the boxes for me, and more importantly, I have fun building it! I think that’s what matters.
