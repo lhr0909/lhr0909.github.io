@@ -27,7 +27,7 @@ On Friday I woke up to some failed jobs at the backend and the Crisp chat went a
 
 I went out for a walk in the evening and that's when I suddenly realized that I should probably do a quick check on Product Hunt and see how it went. And to my surprise, it was on the homepage of PH at the 7th spot.
 
-![Captioner RedNote Express](../images/captioner-rednote-express.png)
+![Captioner RedNote Express](projects/content-creation/writings/personal/content/images/captioner-rednote-express.png)
 
 I totally was not expecting that, and all I was hoping was to get a few more clicks from an active website, and being solo, I didn't tell anyone but my other indiehacker close friend about what I am building. But hey, I made it too!
 
