@@ -21,9 +21,9 @@ jobs:
         run: git checkout -b ${{ github.run_id }}
       - name: Run mc cp
         run: |
-          mc cp --recursive r2/obsidian-vault/${{ vars.SRC_PATH }} ./${{ vars.DEST_PATH }}
+          mc cp --recursive s3/${{ vars.SRC_PATH }} ./${{ vars.DEST_PATH }}
         env:
-          MC_HOST_r2: "https://${{ secrets.MINIO_ACCESS_KEY }}:${{ secrets.MINIO_SECRET_KEY }}@${{ secrets.MINIO_ENDPOINT }}"
+          MC_HOST_s3: "https://${{ secrets.MINIO_ACCESS_KEY }}:${{ secrets.MINIO_SECRET_KEY }}@${{ secrets.MINIO_ENDPOINT }}"
       - name: Commit and push changes
         run: |
           git config user.name "Sync Content Bot"
