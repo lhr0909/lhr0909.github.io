@@ -5,7 +5,6 @@ pubDate: 2025-01-18
 tags:
   - buildinpublic
 ---
-
 Just wanted to share a story of mine for the past week. I am regular Red Note user and I saw a huge wave of TikTok Refugees flooding into the platform and trying to connect with Chinese people that are "native" to the platform on Monday. I didn't think too much at first, but then the wave just kept coming and coming for another 2 full days.
 
 I have never been on TikTok myself, and the videos people uploaded were very amazing! I wanted to be able to share with my Chinese friends and family, who don't speak English. However, some of them do not have any subtitles, and some others only had English ones or poorly translated ones.
