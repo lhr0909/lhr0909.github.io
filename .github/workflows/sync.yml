@@ -21,8 +21,7 @@ jobs:
         run: git checkout -b ${{ github.run_id }}
       - name: Run mc cp
         run: |
-          echo $MC_HOST_s3
-          mc cp --recursive s3/${{ vars.SRC_PATH }} ./${{ vars.DEST_PATH }}
+          mc cp --recursive s3/${{ secrets.BUCKET_NAME }}/${{ vars.SRC_PATH }} ./${{ vars.DEST_PATH }}
         env:
           MC_HOST_s3: "https://${{ secrets.MINIO_ACCESS_KEY }}:${{ secrets.MINIO_SECRET_KEY }}@${{ secrets.MINIO_ENDPOINT }}"
       - name: Commit and push changes
