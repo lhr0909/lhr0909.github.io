@@ -26,7 +26,7 @@ export function HomeOgTemplate() {
     >
       <img
         style={{ borderRadius: "12px" }}
-        src="https://www.divby0.io/simonliang.jpg"
+        src={imageDataUrl}
         width="192"
         height="192"
       />
@@ -69,7 +69,6 @@ export function PostOgTemplate({ title }: { title: string }) {
         <img
           style={{ borderRadius: "12px" }}
           src={imageDataUrl}
-          // src="https://www.divby0.io/simonliang.jpg"
           width="128"
           height="128"
         />
