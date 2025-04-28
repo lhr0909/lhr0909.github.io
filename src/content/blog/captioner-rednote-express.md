@@ -1,18 +1,17 @@
 ---
-title: I built a tool to add Chinese translations to videos for RedNote
-description: I built a tool to add Chinese subtitles to videos for Red Note. Upload your video and download it back with Chinese subtitles in minutes. Express your thoughts and ideas freely with Chinese netizens on Xiaohongshu with natural and accurate translations.
+title: I built a free tool for adding Chinese translations to videos for Red Note
+description: I built a free tool for adding Chinese subtitles to videos for Red Note. Upload your video and download it back with Chinese subtitles in minutes. Express your thoughts and ideas freely with Chinese netizens on Xiaohongshu with natural and accurate translations. The app was launched on Product Hunt and it made #7 for the day, hitting the front page.
 pubDate: 2025-01-18
 tags:
   - buildinpublic
 ---
-
 Just wanted to share a story of mine for the past week. I am regular Red Note user and I saw a huge wave of TikTok Refugees flooding into the platform and trying to connect with Chinese people that are "native" to the platform on Monday. I didn't think too much at first, but then the wave just kept coming and coming for another 2 full days.
 
 I have never been on TikTok myself, and the videos people uploaded were very amazing! I wanted to be able to share with my Chinese friends and family, who don't speak English. However, some of them do not have any subtitles, and some others only had English ones or poorly translated ones.
 
-I have been building Captioner to help people [edit subtitles for their YouTube videos](https://captioner.io/?ref=blog), specifically for the Cantonese-speaking content creators. Captioner fits right in for these TikTok refugees, as they are looking for a way to add Chinese subtitles to their videos.
+I have been building [Captioner](https://captioner.io/?ref=blog) to help people edit subtitles for their YouTube videos, specifically for the Cantonese-speaking content creators.
 
-At first, I was hesitating if I should pull the trigger and build a tool for these creators. Because first of all, I am not sure how the TikTok situation will go, it is just hard to say that how many of these creators will stay on Xiaohongshu and continue to create content for Chinese audience. On the other hand, as time went by on Tuesday and Wednesday, there were more and more creators found out ways to add Chinese subtitles to their videos. I was unfortunately occupied by other life duties and chores, and I could not write a single line of code.
+I was hesitating if I should pull the trigger and build a tool for these creators. Because first of all, I am not sure how the TikTok situation will go, it is just hard to say that how many of these creators will stay on Xiaohongshu and continue to create content for Chinese audience. On the other hand, as time went by on Tuesday and Wednesday, there were more and more creators found out ways to add Chinese subtitles to their videos. I was unfortunately occupied by other life duties and chores, and I could not write a single line of code.
 
 I finally decided to do this, because I noticed this pattern for the submissions for users:
 
