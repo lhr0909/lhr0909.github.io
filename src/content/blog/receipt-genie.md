@@ -3,7 +3,7 @@ title: After scanning 1,000+ receipts, I built my own receipt tracker app
 description: I built a simple receipt scanner and tracker app to track my own receipts, and I want to add more AI features as I go. Download from the App Store today and start scanning your receipts too.
 pubDate: 2025-04-28
 tags:
-  - blog
+  - buildinpublic
 ---
 I have been a long-time digital nomad since before the pandemic, and when I travel, I often find it hard to keep track of my spending on a trip, not only because of the currency changes, but also that there are all sorts of payment methods that I have from different sources and even countries. The only way I have found to reliably funnel all of my expenses is via receipts. I can get a receipt from almost every country I go to. So I grew a habit to collect receipts and scanning them. After over a year I have more than one thousand receipts collected and still counting up. I used to build a webapp to scan these receipts but I wanted something more native on the phone so I can process them faster, so I built a dedicated [receipt scanning and tracking app on my iPhone](https://receipt-genie.com/?ref=blog).
 
