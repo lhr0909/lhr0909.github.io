@@ -19,6 +19,8 @@ Since Obsidian Bases operate on note properties (frontmatter in the markdown fil
 
 Then suddenly something clicked for me - I could check for the tasks in the note, and just maintain a counter in the properties! After a few minutes digging around other existing plugins, and I found just what I needed, and I was able to build out [a plugin](https://github.com/lhr0909/obsidian-plugin-task-properties) that works.
 
+![plugin demo](../images/obsidian-task-properties-demo.mp4)
+
 Currently the plugin will monitor the entire vault and the open file for any updates (specifically metadata updates in the Obsidian plugin terms), which includes the file's tasks. And it will update how many tasks are marked as completed and how many tasks are in total in the note, and add them to a `progress` property. Then in the base, you can set up a formula column to calculate the actual progress as a percentage and display  / sort the notes however you wish. This will only work on the notes with a `#task` tag in the `tags` property.
 
 Since I whip this up together in just a few minutes, I choose to use these default fields and do not provide an option to update, but if this is useful for anyone that are in the similar situation, you can try it out by downloading it via BRAT and let me know how it works! I am going to refine and add settings so it can be customized and submit as a community plugin.
